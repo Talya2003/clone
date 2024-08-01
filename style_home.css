@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=DM:ital@0;1&family=Urbanist:wght@100;300;500&display=swap');
+
+.element {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+:root{
+    /* colors */
+    --light-blue: rgb(2, 192, 255); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+
+    /* don't copy text from this site */
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+}
+
+/* the color of the toolbar */
+::-webkit-scrollbar-track {
+    background-color: black; 
+}
+
+/* the color of the cursor of the toolbar */
+::-webkit-scrollbar-thumb {
+    background-color: black; 
+    border-radius: 6px; 
+}
+
+/* the toolbar in Edge browser */
+::-ms-scrollbar {
+    width: 0px;
+}
+
+::-ms-scrollbar-track {
+    background-color: black;
+}
+
+::-ms-scrollbar-thumb {
+    background-color: black;
+    border-radius: 6px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+nav{
+    position: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background-color: black;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 20px 0px;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+}
+
+
+section{
+    margin-top: 50px;
+    scroll-margin-top: 61px;
+}
+
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    top: 10;
+    right: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* שקיפות 60% */
+    opacity: 0.6;
+}
+
+header .content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+header .content h1{
+    margin-bottom: 10px;
+    word-spacing: 10px;
+    font-size: 75px;
+}
+
+header .content p{
+    font-size: 40px;
+    color: var(--light-blue);
+    font-weight: bold;
+}
+
+header .hire-me-btn {
+    color: white;
+    padding: 15px 35px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 72%;
+    left: 65%;
+    letter-spacing: 2px;
+    text-align: center;
+    z-index: 1;
+}
+
+.hire-me-btn:hover {
+    background-color: white;
+    color: var(--light-blue);
+    box-shadow: 0 0 5px white , 0 0 10px white , 0 0 15px white;
+}
+
+
+
+/* about section */
+.about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 89vh;
+}
+
+.about h1{
+    font-size: 50px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.about .pic{
+    display: flex;
+}
+
+.about .pic img{
+    width: 575px;
+    height: 400px;
+    margin-left: 180px;
+    margin-right: 40px;
+}
+
+.about .pic .describition{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+
+.about .pic .describition h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+    word-spacing: 5px;
+}
+
+.about .pic .describition p{
+    width: 600px;
+}
+
+
+/* resume section */
+.resume{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    min-height: 89vh;
+    height: auto;
+    background-color: black;
+    color: white;
+    line-height: 180%;
+}
+
+.resume h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.resume h2{
+    margin-left: 10%;
+    color: var(--light-blue);
+}
+
+.resume p{
+    margin-left: 10%;
+}
+
+.resume .li_pro{
+    margin-left: 15%;
+}
+
+.resume .li_under{
+    margin-left: 5%;
+}
+
+
+
+/* projects section */
+.projects{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+    min-height: 89vh;
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+}
+
+.projects h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.projects .gallery{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.projects .gallery .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center; 
+}
+
+.projects .gallery .box-container .box{
+    background: white;
+    box-shadow: 0 0 2px black;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 8px 40px black;
+}
+
+.projects .gallery .box-container .box .image{
+    position: relative;
+    overflow: hidden;
+}
+
+.projects .gallery .box-container .box .image img{
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+    object-position: center;
+}
+
+.projects .gallery .box-container .box:hover .image .options{
+    bottom: 0;
+}
+
+.projects .gallery .box-container .box .image .options{
+    position: absolute;    
+    bottom: -10rem;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+}
+
+.projects .gallery .box-container .box .image .options a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: white;
+    background: var(--light-blue);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.projects .gallery .box-container .box .image .options a:hover{
+    color: var(--light-blue);
+    background: white;
+}
+
+.projects .gallery .box-container .box .content{
+    padding: 20px;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.projects .gallery .box-container .box .content h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.projects .gallery .box-container .box .content span{
+    font-size: 16px;
+    line-height: 2;
+    color: gray;
+}
+
+
+/* contact section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 89vh;
+    max-height: 100vh;
+    background-color: black;
+    position: relative;
+    background: url(contact_dark_pic.png);
+    background-size: cover;
+}
+
+.contact h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_info {
+    margin-left: 10%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_info .box{
+    position: relative;
+    display: flex;
+    padding: 10px 0;
+}
+
+.contact_info .box .icon {
+    color: var(--light-blue);
+    background-color: black; 
+    border-radius: 50%; 
+    border: 2px solid var(--light-blue);
+    min-width: 60px;
+    height: 60px; 
+    font-size: 30px;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    margin-right: 20px;
+}
+
+.contact_info .info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.contact_info .info h3{
+    color: var(--light-blue);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.contact a{
+    font-size: 20px;
+    text-decoration: none; 
+    color: white;
+    font-weight: 300;
+}
+  
+.form-container {
+    margin-right: 10%;
+    width: 50%;
+    padding: 40px;
+    background: white;
+}
+
+.form-container h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 800;
+}
+
+.form-container .input-box{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-container .input-box input , 
+.form-container .input-box textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid var(--light-blue);
+    outline: none;
+    resize: none;
+}
+
+.form-container .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: gray;
+}
+
+.form-container .input-box input:focus ~ span , 
+.form-container .input-box input:valid ~ span,
+.form-container .input-box textarea:focus ~ span , 
+.form-container .input-box textarea:valid ~ span{
+    color: var(--light-blue);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.form-container .input-box input[type="submit"]{
+    width: 100px;
+    background: var(--light-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .contact-container .contact_info{
+        margin-bottom: 40px;
+    }
+
+    .contact-container .contact_info , .form-container{
+        width: 100%;
+    }
+}
+
+
+
+/* footer section */
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+}
