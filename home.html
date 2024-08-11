@@ -307,7 +307,7 @@
     </section>
 
 
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
         <h1 class="heading">CONTACT</h1>
 
         <div class="contact-container">
@@ -355,39 +355,218 @@
 
             </div>
 
-            <div class="form-container">            
-                <form class="form" action="https://formsubmit.co/92aa352b0895002fb9e439adb5a1db9e" method="POST">
+            <form class="form" action="https://formsubmit.co/talya8399@gmail.com" method="POST">
+                <h2>Send Message</h2>
+                <div class="input-box">
+                    <input type="text" name="full_name" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" required="required">
+                    <span>E-mail</span>
+                </div>
+                <div class="input-box">
+                    <textarea name="message" required="required"></textarea>
+                    <span>Type Your Message...</span>
+                </div>
+                <div class="input-box">
+                    <input type="submit" name="btn_send" value="SEND">
+                </div>
+
+                <input type="hidden" name="_subject" value="New contact form submission">
+                <input type="hidden" name="_autoresponse" value="תודה על פנייתך, אחזור אליך בהקדם.">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+            </form>
+
+        </div>
+
+    </section> -->
+
+
+
+
+    <form id="contactForm" class="form" action="https://api.web3forms.com/submit" method="POST" style="margin: 8vh;">
+        <input type="hidden" name="access_key" value="YOUR-ACCESS-KEY-HERE">
+        <input type="hidden" name="subject" value="New Contact Form Submission">
+        <h2>Send Message</h2>
+        <div class="input-box">
+            <input type="text" name="name" required="required">
+            <span>Full Name</span>
+        </div>
+        <div class="input-box">
+            <input type="email" name="email" required="required">
+            <span>E-mail</span>
+        </div>
+        <div class="input-box">
+            <textarea name="message" required="required"></textarea>
+            <span>Type Your Message...</span>
+        </div>
+        <div class="input-box">
+            <input type="submit" name="btn_send" value="SEND">
+        </div>
+    </form>
+
+
+
+    <!-- <section id="contact" class="contact">
+        <h1 class="heading">CONTACT</h1>
+        <div class="contact-container">
+            <div class="contact_info">
+                <div class="box">
+                    <div class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </div>
+                    <div class="info">
+                        <h3>Phone</h3>
+                        <p>054-8508399</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="info">
+                        <h3>E-mail</h3>
+                        <p>talya8399@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="icon">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </div>
+                    <div class="info">
+                        <h3>Linked-in</h3>
+                        <a href="https://www.linkedin.com/in/talya-kazayof" target="_blank">Talya Kazayof - Profile</a>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="icon">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </div>
+                    <div class="info">
+                        <h3>Github</h3>
+                        <a href="https://github.com/Talya2003" target="_blank">Talya Kazayof - Portfolio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-container">
+                <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR-ACCESS-KEY-HERE">
                     <h2>Send Message</h2>
                     <div class="input-box">
-                        <input type="text" name="full_name" required="required">
+                        <input type="text" name="name" required="required">
                         <span>Full Name</span>
                     </div>
-
                     <div class="input-box">
                         <input type="email" name="email" required="required">
                         <span>E-mail</span>
                     </div>
-
                     <div class="input-box">
-                        <textarea name="massage" required="required"></textarea>
-                        <span>Type Your Massage...</span>
+                        <textarea name="message" required="required"></textarea>
+                        <span>Type Your Message...</span>
                     </div>
-                    
                     <div class="input-box">
                         <input type="submit" name="btn_send" value="SEND">
                     </div>
-                    
+                    <input type="hidden" name="redirect" value="https://yourwebsite.com/thank.html">
                 </form>
             </div>
-
         </div>
-
-    </section>
+    </section> -->
 
 
     <footer>
         <p>&copy; 2024 - Talya Kazayof - CV</p>
     </footer>
+
+
+
+
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    var form = event.target;
+    var formData = new FormData(form);
+    
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        if (data.success) {
+            alert("הפנייה נשלחה בהצלחה!");
+        } else {
+            alert("שגיאה: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("שגיאה בשליחה: " + error.message);
+    });
+});
+            event.preventDefault();
+            
+            var form = event.target;
+            var formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // הצגת פופאפ
+                    alert("הפנייה נשלחה בהצלחה! אנו נענה בהקדם האפשרי.");
+                    
+                    // שליחת אישור למייל של הפונה
+                    sendConfirmationEmail(formData.get("email"), formData.get("name"));
+                    
+                    // איפוס הטופס
+                    form.reset();
+                } else {
+                    alert("אירעה שגיאה בשליחת הטופס. אנא נסה שנית.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("אירעה שגיאה בשליחת הטופס. אנא נסה שנית.");
+            });
+        });
+        
+        function sendConfirmationEmail(email, name) {
+            var confirmationData = new FormData();
+            confirmationData.append("access_key", "YOUR-ACCESS-KEY-HERE");
+            confirmationData.append("subject", "אישור קבלת פנייתך");
+            confirmationData.append("to", email);
+            confirmationData.append("from_name", "Talya Kazayof");
+            confirmationData.append("message", `שלום ${name},\n\nתודה על פנייתך. קיבלנו את ההודעה שלך ונחזור אליך בהקדם האפשרי.\n\nבברכה,\nTalya Kazayof`);
+        
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: confirmationData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log("Confirmation email sent successfully");
+                } else {
+                    console.error("Failed to send confirmation email");
+                }
+            })
+            .catch(error => {
+                console.error('Error sending confirmation email:', error);
+            });
+        }
+        </script>
 
 </body>
 </html>

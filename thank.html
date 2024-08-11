@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תודה על פנייתך</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .thank-you-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .thank-you-container h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .thank-you-container p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            color: white;
+            padding: 15px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 3px solid var(--light-blue);
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            letter-spacing: 2px;
+        }
+
+        .back-btn:hover {
+            background-color: var(--light-blue);
+            color: white;
+            box-shadow: 0 0 5px var(--light-blue), 0 0 10px var(--light-blue), 0 0 15px var(--light-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>תודה על פנייתך!</h1>
+        <p>ההודעה שלך התקבלה בהצלחה. אחזור אליך בהקדם האפשרי.</p>
+        <a href="index.html" class="back-btn">חזרה לדף הבית</a>
+    </div>
+</body>
+</html>
